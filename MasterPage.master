@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+
+<html xmlns="http://www.w3.org/1999/xhtml" style="background-color: rgb(20, 20, 20);">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+ .Image
+{
+    background-color:Black;
+    border:1px solid darkgray;
+    width:180px; height:180px;
+}
+.Image:hover
+{
+    background-color:Black;
+    border:1px solid #00AAFF;
+    width:180px; height:180px;
+}
+.Text
+{
+    color:White;
+    text-decoration:none;
+}
+.Text:hover
+{
+    color:#00AAFF;
+    text-decoration:none;
+}
+    </style>
+</head>
+<body style="margin: 0px; padding: 0px">
+    <form id="form1" runat="server" >
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+  m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-53189211-1', 'auto');
+        ga('send', 'pageview');
+
+</script>
+    <div id = "Menu1" style="position: fixed; width: 100%; height: 50px; display: inline-block; border-bottom-style: solid; border-bottom-width: 1px; background-color:rgba(0, 0, 0, 0.75); border-bottom-color: rgb(53, 53, 53)">
+    <h1 style="display: block; float: left; color: #FFFFFF; font-size: 16px; font-family: 'Courier New', Courier, monospace; margin-top: 15px; margin-left: 10px; border-right-style: solid; border-right-width: 1px; border-right-color: white; padding-right: 10px;">Exquisite Carcass</h1>
+    <a href="Default.aspx" 
+            style="color: text-decoration: none; display: inline-block; margin-top: 15px; margin-left: 25px;" class="Text">Home</a>
+    <a href="About.aspx" 
+            style="color: text-decoration: none; display: inline-block; margin-top: 15px; margin-left: 25px;" class="Text">About</a>
+    <a href="Tags.aspx" 
+        style="color: text-decoration: none; display: inline-block; margin-top: 15px; margin-left: 25px;" class="Text">Tags</a>
+
+    </div>
+    <div align="center">
+        <asp:ContentPlaceHolder id="MainContent" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
